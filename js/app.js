@@ -37,17 +37,16 @@ const displayBook = (books) => {
 
   //   Display books
   books.docs.forEach((book) => {
-    console.log(book);
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
-        <div class="card h-100">
-            <img height="350px" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top">
+        <div class="card h-100 shadow">
+            <img height="350px" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top p-2">
             <div class="card-body">
-                <h4 class="fw-bold text-center text-success py-2">${book.title}</h4>
-                <h5><b>Author:</b> ${book.author_name[0]}</h5>
-                <h5><b>Publisher:</b> ${book.publisher[0]}</h5>
-                <h5><b>First Publish:</b> ${book.publish_date[0]}</h5>
+                <h5 class="fw-bold text-center text-success py-2">${book.title}</h5>
+                <h6><b>Author:</b> ${book.author_name[0]}</h6>
+                <h6><b>Publisher:</b> ${book.publisher[0]}</h6>
+                <h6><b>First Publish:</b> ${book.publish_date[0]}</h6>
                 
             </div>
         </div>
